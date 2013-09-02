@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/paddingLeft" >
+
+    <ImageButton
+        android:id="@+id/ImageButton00"
+        android:layout_width="@dimen/sudoku_size"
+        android:layout_height="@dimen/sudoku_size"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/holo_green_light"
+        android:onClick="onClick"
+        android:src="@drawable/icon" />
+
+    <ImageButton
+        android:id="@+id/ImageButton01"
+        android:layout_width="@dimen/sudoku_size"
+        android:layout_height="@dimen/sudoku_size"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/margin_interval"
+        android:layout_toRightOf="@id/ImageButton00"
+        android:background="@color/holo_green_light"
+        android:onClick="onClick"
+        android:src="@drawable/icon" />
+
+    <ImageButton
+        android:id="@+id/ImageButton02"
+        android:layout_width="@dimen/sudoku_size"
+        android:layout_height="@dimen/sudoku_size"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ImageButton00"
+        android:layout_marginTop="@dimen/margin_interval"
+        android:background="@color/holo_blue_dark"
+        android:onClick="onClick"
+        android:src="@drawable/icon" />
+
+    <ImageButton
+        android:id="@+id/ImageButton03"
+        android:layout_width="@dimen/sudoku_size"
+        android:layout_height="@dimen/sudoku_size"
+        android:layout_below="@+id/ImageButton00"
+        android:layout_marginLeft="@dimen/margin_interval"
+        android:layout_marginTop="@dimen/margin_interval"
+        android:layout_toRightOf="@+id/ImageButton00"
+        android:background="@color/holo_green_light"
+        android:onClick="onClick"
+        android:src="@drawable/icon" />
+
+    <ImageButton
+        android:id="@+id/ImageButton04"
+        android:layout_width="@dimen/sudoku_size"
+        android:layout_height="@dimen/sudoku_size"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ImageButton02"
+        android:layout_marginTop="@dimen/margin_interval"
+        android:background="@color/holo_green_light"
+        android:onClick="onClick"
+        android:src="@drawable/icon" />
+
+    <ImageButton
+        android:id="@+id/ImageButton05"
+        android:layout_width="@dimen/sudoku_size"
+        android:layout_height="@dimen/sudoku_size"
+        android:layout_below="@+id/ImageButton02"
+        android:layout_marginLeft="@dimen/margin_interval"
+        android:layout_marginTop="@dimen/margin_interval"
+        android:layout_toRightOf="@+id/ImageButton02"
+        android:background="@color/holo_blue_light"
+        android:onClick="onClick"
+        android:src="@drawable/icon" />
+
+    <ImageButton
+        android:id="@+id/ImageButton06"
+        android:layout_width="@dimen/sudoku_size"
+        android:layout_height="@dimen/sudoku_size"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ImageButton04"
+        android:layout_marginTop="@dimen/margin_interval"
+        android:background="@color/holo_blue_dark"
+        android:onClick="onClick"
+        android:src="@drawable/icon" />
+
+    <ImageButton
+        android:id="@+id/ImageButton07"
+        android:layout_width="@dimen/sudoku_size"
+        android:layout_height="@dimen/sudoku_size"
+        android:layout_below="@+id/ImageButton04"
+        android:layout_marginLeft="@dimen/margin_interval"
+        android:layout_marginTop="@dimen/margin_interval"
+        android:layout_toRightOf="@+id/ImageButton04"
+        android:background="@color/holo_blue_light"
+        android:onClick="onClick"
+        android:src="@drawable/icon" />
+
+</RelativeLayout>
