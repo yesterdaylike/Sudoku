@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">数独</string>
+    <string name="action_undo">回退</string>
+
+    <string-array name="types_name">
+        <item>唯一数</item>
+        <item>全宫摒一刀流</item>
+        <item>全宫摒快刀流</item>
+        <item>行列摒除</item>
+        <item>唯一余数</item>
+        <item>唯一余数2</item>
+        <item>区块摒除</item>
+        <item>数对法</item>
+        <item>全双值坟墓</item>
+    </string-array>
+<string name="success">成功</string>
+</resources>

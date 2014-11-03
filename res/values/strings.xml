@@ -1,18 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <item name="views" type="id"/>
-    <item name="values" type="id"/>
-    <item name="number" type="id"/>
-    <item name="blank" type="id"/>
-
     <string name="app_name">Sudoku</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="menu_settings">Settings</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="help">hui\nis\nbest\none\nhaha\nbasa\n.Bounce\nInterpolator\nhui\nis\nbest\none\nhaha\nbasa\n.Bounce\nInterpolator\nhui\nis\nbest\none\nhaha\nbasa\n.Bounce\nInterpolator\nzheng\nwen\nhui\nis\nbest\none\nhaha\nbasa\n.</string>
-    <string name="feedback_hint">请填写您的意见</string>
-    <string name="subject">添加主题</string>
-    <string name="select_mail_software">用哪一个软件发送邮件？</string>
-    <string name="start">开始</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_undo">Undo</string>
+
+    <string-array name="types_name">
+        <item>Last Value</item>
+        <item>Hidden Single in Box</item>
+        <item>Hidden Single in Box 2</item>
+        <item>Hidden Single in Row/Column</item>
+        <item>Naked Single</item>
+        <item>Naked Single 2</item>
+        <item>Locked Candidates</item>
+        <item>Pairs</item>
+        <item>Bivalue Universal Grave</item>
+    </string-array>
+
+    <integer-array name="types">
+        <item>901</item>
+        <item>911</item>
+        <item>912</item>
+        <item>913</item>
+        <item>921</item>
+        <item>922</item>
+        <item>931</item>
+        <item>941</item>
+        <item>951</item>
+    </integer-array>
+
+    <item name="data_base_data" type="id"/>
+    <item name="data_base_id" type="id"/>
+    <item name="REQUEST_CODE" type="id"/>
+    <item name="RESULT_CODE_OK" type="id"/>
+
+    <string name="success">Success</string>
 
 </resources>
