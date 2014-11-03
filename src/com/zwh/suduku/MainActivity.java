@@ -1,5 +1,6 @@
 package com.zwh.suduku;
 
+import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Fragment;
@@ -179,6 +180,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 		public PlaceholderFragment( ){
 		}
 		
+		@SuppressLint("ValidFragment")
 		public PlaceholderFragment(String type){
 			this.mType = type;
 		}
