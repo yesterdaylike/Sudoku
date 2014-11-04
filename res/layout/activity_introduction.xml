@@ -29,7 +29,8 @@
             android:id="@+id/left_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onLeftButtonClick" />
+            android:onClick="onLeftButtonClick"
+            android:text="@string/back" />
 
         <SeekBar
             android:id="@+id/seekbar"
@@ -37,14 +38,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:clickable="false"
-            android:max="7"
-            android:progress="1" />
+            android:max="5"
+            android:progress="0" />
 
         <Button
             android:id="@+id/right_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onRightButtonClick" />
+            android:onClick="onRightButtonClick"
+            android:text="@string/forward" />
     </LinearLayout>
 
 </LinearLayout>

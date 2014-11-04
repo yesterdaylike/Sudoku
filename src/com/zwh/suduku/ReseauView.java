@@ -203,8 +203,8 @@ public class ReseauView extends View{
 			for (w = 1; w <= SIZE; w++, k++) {
 				color = isDarkOrLight(w, h) ? colorDark : colorLight;
 				paintLight.setColor(color);
-
 				canvas.drawRect(posWidth[w], posHeight[h], posWidth[w+1]-2, posHeight[h+1]-2, paintLight);
+
 				int cudata = mData[k];
 
 				if( mData[k] != 0 ){
@@ -380,7 +380,7 @@ public class ReseauView extends View{
 
 	void rebuildActionStack(int[] history){
 		Action action = null;
-		
+
 		for (int j = 0; j < history.length; j++) {
 			Log.i("rebuildActionStack", " "+j+": "+history[j]);
 		}
@@ -405,11 +405,11 @@ public class ReseauView extends View{
 			history[i++] = action.oldValue;
 			history[i++] = action.value;
 		}
-		
+
 		for (int j = 0; j < history.length; j++) {
 			Log.i("saveActionStack", " "+j+": "+history[j]);
 		}
-		
+
 		return history;
 	}
 

@@ -31,9 +31,18 @@ public class Introduction extends Activity{
 		seekBar = (SeekBar) findViewById(R.id.seekbar);
 		imageView = (ImageView) findViewById(R.id.imageview);
 
-		imageView.setImageResource(R.drawable.ic_launcher);
-
 		introductionStr = getResources().getStringArray(R.array.introduction_message);
+
+		final int[] resids = {
+				R.drawable.step1,
+				R.drawable.step2,
+				R.drawable.intro5,
+				R.drawable.step3,
+				R.drawable.step4,
+				R.drawable.intro5,
+		};
+
+		imageView.setImageResource(resids[0]);
 		messageTextView.setText(introductionStr[0]);
 
 		seekBar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
@@ -54,7 +63,9 @@ public class Introduction extends Activity{
 			public void onProgressChanged(SeekBar seekBar, int progress,
 					boolean fromUser) {
 				// TODO Auto-generated method stub
-				Log.i("onProgressChanged", ""+progress);
+				Log.i("progress", "progress: "+progress);
+				imageView.setImageResource(resids[progress]);
+				messageTextView.setText(introductionStr[progress]);
 			}
 		});
 	}
