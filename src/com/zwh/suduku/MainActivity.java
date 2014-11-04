@@ -177,7 +177,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 			return fragment;
 		}
 
-		public PlaceholderFragment( ){
+		public PlaceholderFragment(){
 		}
 		
 		@SuppressLint("ValidFragment")
