@@ -3,8 +3,24 @@
 
     <string name="app_name">轻数独</string>
     <string name="action_undo">回退</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">设置</string>
+    <string name="action_help">帮助</string>
+    <string name="skip">跳过</string>
+    <string name="next_step">下一步</string>
+    <string name="tutorial">Tutorial</string>
+    <string name="start">开始</string>
 
+    <string-array name="introduction_message">
+        <item>1.在数独中，你需要从 1、2、3、4、5、6、7、8、9 中选择一个填到每一个空格字中.</item>
+        <item>2.保证每行 (共有9行), 每列 (共有9列) 都包含1到9每个数字.\n\n
+3.同样的，每个黑边围成的3x3的格子中都包含1到9每个数字.</item>
+        <item>4.这是一个已完成的例子. 仔细观察它的每行每列都包含1到9.\n\n
+5.每个3x3格子中也都包含1到9.</item>
+        <item>6.对于右上的3x3的格子, 在第一行和第三行中都已经包含1，
+            7.所以1只可能在红色标记的小方块中了</item>
+        <item>8.同样的, 1只可能在红色标记的小方块中.</item>
+        <item>9.这里能发现更多的技巧，更多的乐趣，开始吧！</item>
+    </string-array>
     <string-array name="types_name">
         <item>唯一数</item>
         <item>全宫摒一刀流</item>
@@ -16,5 +32,7 @@
         <item>数对法</item>
         <item>全双值坟墓</item>
     </string-array>
-<string name="success">成功</string>
+
+    <string name="success">成功</string>
+
 </resources>

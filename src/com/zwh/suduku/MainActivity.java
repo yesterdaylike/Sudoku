@@ -3,24 +3,33 @@ package com.zwh.suduku;
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.app.LoaderManager;
 import android.content.Intent;
 import android.content.Loader;
+import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.TextView;
 
 public class MainActivity extends Activity implements ActionBar.TabListener {
 
@@ -76,11 +85,20 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 					.setText(mSectionsPagerAdapter.getPageTitle(i))
 					.setTabListener(this));
 		}
+
+		firstInsert();
 	}
 
+	private void firstInsert(){
+		SharedPreferences setting = getSharedPreferences("sudoku", 0);
+		Boolean user_first = setting.getBoolean("FIRST",true);
+		if(user_first){
+			setting.edit().putBoolean("FIRST", false).commit();
+			showHelpDialog();
+		}
+	}
 
-
-	/*@Override
+	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -94,11 +112,74 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
-		if (id == R.id.action_settings) {
+		if (id == R.id.action_help) {
+			showHelpDialog();
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
-	}*/
+	}
+
+	private void showHelpDialog(){
+		progress = 0;
+		AlertDialog.Builder builder = new Builder(this, AlertDialog.THEME_HOLO_LIGHT);
+		builder.setTitle(R.string.tutorial);
+		builder.setCancelable(false);
+
+		View view = getLayoutInflater().inflate(R.layout.activity_introduction, null);
+		builder.setView(view);
+
+		messageTextView = (TextView) view.findViewById(R.id.textview);
+		imageView = (ImageView) view.findViewById(R.id.imageview);
+
+		introductionStr = getResources().getStringArray(R.array.introduction_message);
+
+		imageView.setImageResource(resids[0]);
+		messageTextView.setText(introductionStr[0]);
+		dialog = builder.create();
+		dialog.show();
+
+		AnimationDrawable frameAnimation =    (AnimationDrawable)imageView.getDrawable();
+		frameAnimation.setVisible(true, true);
+		frameAnimation.start();
+	}
+
+	final int[] resids = {
+			R.drawable.step1,
+			R.drawable.step2,
+			R.drawable.intro5,
+			R.drawable.step3,
+			R.drawable.step4,
+			R.drawable.intro5,
+	};
+
+	TextView messageTextView;
+	ImageView imageView;
+	String[] introductionStr;
+	int progress = 0;
+	AlertDialog dialog;
+
+	public void onSkipButtonClick(View view){
+		dialog.dismiss();
+	}
+
+	public void onNextButtonClick(View view){
+		progress++;
+		if( progress < resids.length ){
+			imageView.setImageResource(resids[progress]);
+			messageTextView.setText(introductionStr[progress]);
+			AnimationDrawable frameAnimation =    (AnimationDrawable)imageView.getDrawable();
+			frameAnimation.setVisible(true, true);
+			frameAnimation.start();
+		}
+		else{
+			dialog.dismiss();
+		}
+
+		if( progress == resids.length - 1 ){
+			Button button = (Button)view;
+			button.setText(R.string.start);
+		}
+	}
 
 	@Override
 	public void onTabSelected(ActionBar.Tab tab,
@@ -179,7 +260,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 
 		public PlaceholderFragment(){
 		}
-		
+
 		@SuppressLint("ValidFragment")
 		public PlaceholderFragment(String type){
 			this.mType = type;
@@ -204,9 +285,9 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 			// Create an empty adapter we will use to display the loaded data.
 			// We pass null for the cursor, then update it in onLoadFinished()
 			mDbHelper = new DataBaseHelper(getActivity());
-			
+
 			Cursor cursor = mDbHelper.query( mType );
-			
+
 			mAdapter = new CursorAdapter(getActivity(), 
 					android.R.layout.simple_list_item_1, cursor,
 					fromColumns, toViews, 0);
@@ -227,7 +308,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 		@Override
 		public Loader<Cursor> onCreateLoader(int id, Bundle args) {
 			// TODO Auto-generated method stub
-			int type[] = getResources().getIntArray(R.array.types);
+			//int type[] = getResources().getIntArray(R.array.types);
 			return new DBCursorLoader(getActivity(),  mType);
 		}
 

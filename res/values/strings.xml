@@ -3,7 +3,12 @@
 
     <string name="app_name">Sudoku Light</string>
     <string name="action_settings">Settings</string>
+    <string name="action_help">Help</string>
     <string name="action_undo">Undo</string>
+    <string name="skip">Skip</string>
+    <string name="next_step">Next step</string>
+    <string name="tutorial">Tutorial</string>
+    <string name="start">Start Play</string>
 
     <string-array name="types_name">
         <item>Last Value</item>
@@ -18,15 +23,15 @@
     </string-array>
     <string-array name="introduction_message">
         <item>1.In Sudoku, you place a number from 1 to 9 in each blank cell.</item>
-        <item>2.Each rows (there are nine rows), and columns (there are also nine columes) contain numbers from 1 through 9.\n
-        3.Also, 3x3 blocks bounded by bold lines (nine blocks) contain numbers from 1 through 9.</item>
-        <item>4.This is an example of answer. Lock at each row. Each cell in the line contains numbers 1 through 9.\n
-        5.Please check each column also contain every number from 1 to 9.\n
-        6.And, each 3x3 block contains numbers from 1 to 9.</item>
-        <item>8.Since, as for the 3x3 block on the right hand-side, 1 is already contained in the upper row and third row at the left, therefore, 1 is not placed in the cell.\n
-        9.Would be the only red cell that wounld contain 1.</item>
-        <item>10.Again, 1 goes into the red cell.</item>
-        <item>11.There are many more tips.Try discovering your own as you go along.</item>
+        <item>2.Each rows (there are nine rows), and columns (there are also nine columes) contain numbers from 1 through 9.\n\n
+3.Also, 3x3 blocks bounded by bold lines (nine blocks) contain numbers from 1 through 9.</item>
+        <item>4.This is an example of answer. Lock at each row. Each cell in the line contains numbers 1 through 9.\n\n
+5.Please check each column also contain every number from 1 to 9.\n\n
+6.And, each 3x3 block contains numbers from 1 to 9.</item>
+        <item>7.Since, as for the 3x3 block on the right hand-side, 1 is already contained in the upper row and third row at the left, therefore, 1 is not placed in the cell.\n\n
+8.Would be the only red cell that wounld contain 1.</item>
+        <item>9.Again, 1 goes into the red cell.</item>
+        <item>10.There are many more tips.Try discovering your own as you go along.</item>
     </string-array>
 
     <integer-array name="types">
@@ -47,7 +52,5 @@
     <item name="RESULT_CODE_OK" type="id"/>
 
     <string name="success">Success</string>
-    <string name="back">back</string>
-    <string name="forward">forward</string>
 
 </resources>

@@ -187,6 +187,7 @@ public class ReseauView extends View{
 	protected void onDraw(Canvas canvas) {
 		if( null == posWidth ){
 			initPositionlist();
+			//getAnswer();
 		}
 
 		paintLight.setColor(colorDialog);
@@ -254,7 +255,6 @@ public class ReseauView extends View{
 		default:
 			break;
 		}
-		//getAnswer();
 	}
 
 	int getBlankSize(){

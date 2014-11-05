@@ -4,9 +4,9 @@
 
     <item
         android:drawable="@drawable/intro1"
-        android:duration="3000"/>
+        android:duration="2000"/>
     <item
         android:drawable="@drawable/intro6"
-        android:duration="1000"/>
+        android:duration="500"/>
 
 </animation-list>

@@ -22,6 +22,6 @@
         android:duration="1000"/>
     <item
         android:drawable="@drawable/intro16"
-        android:duration="1000"/>
+        android:duration="3000"/>
 
 </animation-list>
