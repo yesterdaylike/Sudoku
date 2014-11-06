@@ -3,19 +3,7 @@
     android:oneshot="false" >
 
     <item
-        android:drawable="@drawable/intro7"
-        android:duration="2000"/>
-    <item
-        android:drawable="@drawable/intro8"
-        android:duration="1000"/>
-    <item
-        android:drawable="@drawable/intro9"
-        android:duration="1000"/>
-    <item
-        android:drawable="@drawable/intro8"
-        android:duration="1000"/>
-    <item
-        android:drawable="@drawable/intro10"
-        android:duration="3000"/>
+        android:drawable="@drawable/intro5"
+        android:duration="10000"/>
 
 </animation-list>

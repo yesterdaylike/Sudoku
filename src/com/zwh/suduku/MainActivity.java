@@ -146,10 +146,10 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 	final int[] resids = {
 			R.drawable.step1,
 			R.drawable.step2,
-			R.drawable.intro5,
 			R.drawable.step3,
 			R.drawable.step4,
-			R.drawable.intro5,
+			R.drawable.step5,
+			R.drawable.step3,
 	};
 
 	TextView messageTextView;

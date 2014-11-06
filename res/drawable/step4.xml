@@ -3,25 +3,19 @@
     android:oneshot="false" >
 
     <item
-        android:drawable="@drawable/intro11"
+        android:drawable="@drawable/intro7"
         android:duration="2000"/>
     <item
-        android:drawable="@drawable/intro12"
+        android:drawable="@drawable/intro8"
         android:duration="1000"/>
     <item
-        android:drawable="@drawable/intro13"
+        android:drawable="@drawable/intro9"
         android:duration="1000"/>
     <item
-        android:drawable="@drawable/intro14"
+        android:drawable="@drawable/intro8"
         android:duration="1000"/>
     <item
-        android:drawable="@drawable/intro15"
-        android:duration="1000"/>
-    <item
-        android:drawable="@drawable/intro14"
-        android:duration="1000"/>
-    <item
-        android:drawable="@drawable/intro16"
+        android:drawable="@drawable/intro10"
         android:duration="3000"/>
 
 </animation-list>
